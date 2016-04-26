@@ -243,7 +243,7 @@ git merge &lt;branch-name&gt;
 						</code></pre>
 					</section>
 				</section>
-				 
+
 				<section><!------------------------------------ slide ----------------------------------------------->
 					<section>
 						<h2>Analyzing a GitHub project structure</h2>
@@ -274,6 +274,18 @@ git merge &lt;branch-name&gt;
 							SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this section.</p>
 						<p><a href="https://help.github.com/articles/generating-an-ssh-key/" target="_blank">Generating an SSH key</a></p>
 					</section>
+					<section>
+						<h3>git clone</h3>
+						<p>Clone a repository into a new directory</p>
+						<pre><code data-trim>
+//Clone the repository located at &lt;repo&gt; onto the local machine.
+git clone &lt;repo&gt;
+
+//Clone the repository located at &lt;repo&gt; into the folder
+//called &lt;directory&gt; on the local machine.
+git clone &lt;repo&gt; &lt;directory&gt;
+						</code></pre>
+					</section>
 				</section>
 
 				<section><!------------------------------------ slide ----------------------------------------------->
@@ -284,15 +296,25 @@ git merge &lt;branch-name&gt;
 						<h3>git push</h3>
 						<p>Updates remote refs using local refs, while sending objects necessary to complete the given refs.</p>
 						<pre><code data-trim>
-//Git manual
-git push &lt;branch-name&gt;
+//Push the specified branch to &lt;remote&gt;,
+//along with all of the necessary commits and internal objects.
+git push &lt;remote&gt; &lt;branch&gt;
+						</code></pre>
+					</section>
+					<section>
+						<h3>git fetch</h3>
+						<p>Download objects and refs from another repository</p>
+						<pre><code data-trim>
+//Fetch all of the branches from the repository.
+git fetch &lt;remote&gt;
 						</code></pre>
 					</section>
 					<section>
 						<h3>git pull</h3>
 						<p>Incorporates changes from a remote repository into the current branch.</p>
 						<pre><code data-trim>
-//Git manual
+//Fetch the specified remote’s copy of the current branch and
+//immediately merge it into the local copy.
 git pull &lt;branch-name&gt;
 						</code></pre>
 					</section>
@@ -302,13 +324,13 @@ git pull &lt;branch-name&gt;
 					<section>
 						<h2>Resources</h2>
 					</section>
-					<pre><code data-trim>
+					<section>
+						<pre><code data-trim>
 //Git manual
 git help
 
 git help &lt;command&gt;
-					</code></pre>
-					<section>
+						</code></pre>
 						<p>
 							<ul>
 								<li><a href="https://git-scm.com/docs/git-init"  target="_blank">https://git-scm.com</a></li>
